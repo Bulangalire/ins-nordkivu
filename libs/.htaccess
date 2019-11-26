@@ -1,0 +1,4 @@
+AuthName "Acces non autorise"
+AuthType Basic
+AuthUserFile "/home/www/localhost/ins-nordkivu/issnt/libs/.htpasswd"
+Require valid-user

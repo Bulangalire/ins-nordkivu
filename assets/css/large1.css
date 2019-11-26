@@ -1,0 +1,419 @@
+@font-face { font-family: 'roboto'; src: url('../fonts/Roboto-Regular.ttf');}
+@font-face { font-family: 'Opensans'; src: url('../fonts/OpenSans-CondLight.ttf');}
+@font-face { font-family: 'Opensans-b'; src: url('../fonts/OpenSans-CondBold.ttf');}
+body { background: #f7f7f7 url(../img/bg.jpg) no-repeat center top }
+html, body{
+  height: 100%;
+}
+.bg { min-height: 100px; margin-bottom: 6px; padding-right: 4px !important; padding-left: 4px !important; }
+
+section { padding: 0 105px; margin-top: 54px }
+section .portail { border-radius: 9px; padding: 35px 22px 0 22px; height: 470px;
+	background:#2C3E50 url(../img/bloc/header.gif) no-repeat 0% 0%; }
+section .bg .col-sm-12 { padding-left: 0 !important; padding-right: 0 !important }
+section .portail .title { text-align: center; text-transform: uppercase; color: #fff }
+section .portail .title h3 { /*background: url(../img/underline.png) no-repeat center bottom; padding-bottom: 20px;*/ font-size: 19px; font-family: 'Opensans'; }
+section .portail .title h1 { margin-top: 15px; font-size: 24px; font-family: 'opensans-b'; }
+section .portail .title h6 { font-family: 'roboto'; font-size: 12px; text-align: center; font-weight: 100; color: #fff; text-transform: initial; }
+section .portail a.link { position: relative; bottom: -189px; color: rgb(54, 54, 54); font-family: opensans-b; background: linear-gradient(to top, rgb(198, 198, 198), rgb(255, 255, 255)); background: -o-linear-gradient(to top, rgb(198, 198, 198), rgb(255, 255, 255)); background: -moz-linear-gradient(to top, rgb(198, 198, 198), rgb(255, 255, 255)); background: -webkit-linear-gradient(to top, rgb(198, 198, 198), rgb(255, 255, 255)); padding: 13px 26px; border-radius: 5px; font-size: 23px; text-shadow: 1px 2px 1px rgb(255, 255, 255); }
+section .portail a.link:hover { color: #01795E; text-decoration: none; background: linear-gradient(to bottom, rgb(198, 198, 198), rgb(255, 255, 255)); background: -o-linear-gradient(to bottom, rgb(198, 198, 198), rgb(255, 255, 255)); background: -moz-linear-gradient(to bottom, rgb(198, 198, 198), rgb(255, 255, 255)); background: -webkit-linear-gradient(to bottom, rgb(198, 198, 198), rgb(255, 255, 255)); }
+section .portail a.link:focus { outline: none; color: #01795E; text-decoration: none; background: #fff; text-shadow: 1px 2px 1px #ddd; }
+section .portail .slider{
+	margin-top: 140px;
+	padding: 35px 22px 0 22px;
+	width:600px;
+	height:250px;
+	height:230px;
+	background-color:#f7f7f7;
+}
+section .portail .slider img {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+.tabMin{
+	display:none;
+}
+
+/*
+Name: Sliding Login Panel with jQuery 1.3.2
+Author: Jeremie Tisseau
+Author URI: http://web-kreation.com/
+Date: March 26, 2009
+Version: 1.0
+
+	The CSS, XHTML and design is released under Creative Common License 3.0:
+	http://creativecommons.org/licenses/by-sa/3.0/
+
+*/
+
+/***** clearfix *****/
+.clear {clear: both;height: 0;line-height: 0;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+.clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* sliding panel */
+#toppanel {
+    position: absolute;   /*Panel will overlap  content */
+    /*position: relative;*/   /*Panel will "push" the content down */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 100%; /* font-size set to 130% for the default Kubrick Wordpress theme */
+}
+
+#panel {
+	width: 100%;
+	height: 280px;
+	color: #999999;
+	background: #272727;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+	display: none;
+}
+
+#panel h1 {
+	font-size: 1.6em;
+	padding: 5px 0 10px;
+	margin: 0;
+	color: white;
+	text-align: left;
+}
+
+#panel h2{
+	font-size: 1.2em;
+	padding: 10px 0 5px;
+	margin: 0;
+	color: white;
+	text-align: left;
+}
+
+#panel p {
+	margin: 5px 0;
+	padding: 0;
+}
+
+#panel a {
+	text-decoration: none;
+	color: #15ADFF;
+}
+
+#panel a:hover {
+	color: white;
+}
+
+#panel a-lost-pwd {
+	display: block;
+	float: left;
+}
+
+#panel ul {
+	margin: 0 0 5px 0;
+	padding: 0;
+	line-height: 1.6em;
+	list-style: none;
+}
+
+#panel .content {
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 15px;
+	text-align: left;
+	font-size: 0.85em;
+}
+
+#panel .content .left {
+	width: 280px;
+	float: left;
+	margin-bottom: 25px;
+	padding: 0 15px;
+	border-right: 1px solid #333;
+	min-height: 220px;
+}
+
+#panel .content .border {
+	border-left: 1px solid #333;
+}
+
+#panel .content .narrow {
+	width:120px !important;
+}
+
+#panel .content form {
+	margin: 0 0 10px 0;
+}
+
+#panel .content label {
+	float: left;
+	padding-top: 8px;
+	clear: both;
+	width: 280px;
+	display: block;
+}
+
+#panel .content input.field {
+	border: 1px #1A1A1A solid;
+	background: #414141;
+	margin-right: 5px;
+	margin-top: 4px;
+	width: 200px;
+	color: white;
+	height: 24px;
+}
+
+#panel .content input:focus.field {
+	background: #545454;
+}
+
+/* BUTTONS */
+/* Login and Register buttons */
+#panel .content input.bt_login,
+#panel .content input.bt_register {
+	display: block;
+	float: left;
+	clear: left;
+	height: 24px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+#panel .content input.bt_login {
+	width: 74px;
+	background: transparent url(../img/bt_login.png) no-repeat 0 0;
+}
+
+#panel .content input.bt_register {
+	width: 94px;
+	color: white;
+	background: transparent url(../img/bt_register.png) no-repeat 0 0;
+}
+
+#panel .content ul li {
+	/*font-size: 12px ;
+        line-height: 18px ;*/
+}
+
+#panel .lost-pwd {
+	display: block;
+	float:left;
+	clear: right;
+	padding: 15px 5px 0;
+	font-size: 0.95em;
+	text-decoration: underline;
+}
+
+/* Panel Tab/button */
+.tab{
+  	background: url(../img/tab_b.png) repeat-x 0 0;
+	height: 45px;
+	position: relative;
+    top: 0;
+    z-index: 999;
+	float:auto;
+}
+
+ .tab ul.login {
+	display: block;
+	position: relative;
+  	float: right;
+  	clear: right;
+  	height: 42px;
+	width: auto;
+  	font-weight: bold;
+	line-height: 42px;
+	margin: 0;
+	right: 150px;
+  	color: white;
+  	font-size: 80%;
+	text-align: center;
+        /* font-size: 12px ;
+        line-height: 18px ; */
+}
+
+ .tab ul.login li.left {
+  	background: url(../img/tab_l.png) no-repeat left 0;
+  	height: 46px;
+	width: 25px;
+	padding: 0;
+	margin: 0;
+  	display: block;
+	float: left;
+}
+
+ .tab ul.login li.right {
+  	background: url(../img/tab_r.png) no-repeat left 0;
+  	height: 42px;
+	width: 25px;
+	padding: 0;
+	margin: 0;
+  	display: block;
+	float: left;
+}
+
+ .tab ul.login li {
+ 	text-align: left;
+  	padding: 0 4px;
+	display: block;
+	float: left;
+	height: 42px;
+  	background: url(../img/tab_m.png) repeat-x 0 0;
+}
+
+.tab ul.login li a {
+	color: #15ADFF;
+}
+
+ .tab ul.login li a:hover {
+	color: white;
+}
+
+.tab .sep {color:#414141}
+
+.tab a.open, .tab a.close {
+	height: 20px;
+	line-height: 20px !important;
+	padding-left: 30px !important;
+	cursor: pointer;
+	display: block;
+	width: 100px;
+	position: relative;
+	top: 11px;
+}
+
+.tab a.open {background: url(../img/bt_open.png) no-repeat left 0;}
+.tab a.close {background: url(../img/bt_close.png) no-repeat left 0;}
+.tab a:hover.open {background: url(../img/bt_open.png) no-repeat left -19px;}
+.tab a:hover.close {background: url(../img/bt_close.png) no-repeat left -19px;}
+
+
+
+
+header { margin-top: 10px; padding: 0 160px; height: 180px }
+
+header h6 { font-family: 'robotor'; font-size: 13px; text-align: center; font-weight: 100; }
+header .langue { text-align: center; word-spacing: -4px; }
+header span.lang { font-family: 'Oswaldl'; font-weight: bold; font-size: 14px; color: rgba(255, 255, 255, 0.5); }
+header a:hover span:hover { color: #fff; text-decoration: none }
+header a span.lang  { background: #565656; padding: 4px 16px 5px; border-radius: 0 8px 8px 0;  }
+header a span.lang.active { background: rgb(16, 153, 122); padding: 4px 16px 5px; border-radius: 8px 0px 0px 8px; }
+
+
+section .bloc { border-radius: 7px; background: #fff; height: 111px; margin-bottom: 8px; text-align: center; padding-top: 12px; position: relative; overflow-x: hidden; }
+section .bloc .title { transition: all 0.5s ease; position: absolute; bottom: 0; background: #00604a; height: 32px; padding-top: 9px; text-align: center; left: 0; right: 0; overflow: hidden; transition: height 0.5s ease }
+section a:hover .bloc .title { transition: all 0.3s ease; height: 131px; padding-top: 40px; }
+section .bloc h2 { color: #fff; font-family: 'calibri'; font-weight: bold; font-size: 12px; text-transform: uppercase; margin: 0 }
+section .bloc span { border: 1px solid #fff; background: rgba(255, 255, 255, 1); position: relative; top: 15px; font-size: 12px; font-weight: bold; padding: 6px 12px; border-radius: 3px; }
+section .bloc span:hover { background: rgba(255, 255, 255, 0.5); }
+footer { z-index: -1; text-align: center; color: #fff; font-weight: bold; font-size: 10px; position: absolute; bottom: 0; left: 0; right: 0; margin-bottom: 17px; }
+
+#footer {
+   position:absolute;
+   left:0px;
+   bottom:0px;
+   height:30%px;
+   width:100%;
+   background:#999;
+}
+
+
+
+@media (max-width: 1200px) {
+
+	section .portail .title h5 { font-size: 12px; }
+	section .portail .title h1 { font-size: 17px; }
+	section .portail .title h5 { font-size: 12px; }
+	section .portail .slider {width:99%;}
+	section .portail a.link { font-size: 19px; padding: 11px 23px; }
+	section .portail { height: 514px; }
+	section .bloc { height: 122px }
+}
+
+@media (max-width: 991px) {
+	.container .tab {display:none;}
+	.container .tabMin{display:block;}
+	section { padding: 0 }
+	header { height: 223px; padding: 0 90px }
+	/*section .bloc .title { height: 48px }*/
+	section .portail .slider {width:99%;}
+
+
+
+
+
+
+#menu {
+
+  padding: 0;
+  margin:0;
+  list-style:none;
+  text-align: left;
+  width: 180px;
+}
+#menu ul {
+  padding:0;
+  margin:5px;
+  list-style:none;
+  text-align: center;
+}
+#menu li {
+   background-color:#729EBF;
+   background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+   background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+   border-radius: 6px;
+   margin-bottom:2px;
+   box-shadow: 3px 3px 3px #999;
+   border:solid 1px #333A40
+}
+#menu li li {
+   max-height:0;
+   overflow: hidden;
+   transition: all .5s;
+   border-radius:0;
+   background: #444;
+   box-shadow: none;
+   border:none;
+   margin:0
+}
+#menu a {
+  display:block;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 0;
+  font-family: verdana;
+  font-size:1.2em
+}
+#menu ul li a, #menu li:hover li a {
+  font-size:1em
+}
+#menu li:hover {
+   background: #729EBF
+}
+#menu li li:hover {
+   background: #999;
+}
+#menu ul li:last-child {
+   border-radius: 0 0 6px 6px;
+   border:none;
+
+}
+#menu li:hover li {
+  max-height: 15em;
+}
+
+
+
+}
+

@@ -1,0 +1,6 @@
+RewriteEngine On
+#Nom d'Hote canonique : avec ou sans www
+#RewriteCond %{http_HOST} !^www\.ins-nordkivu\.org [NC]
+#RewriteCond %{http_HOST} !^$
+#RewriteRule ^/?(.*) http://localhost/ins-nordkivu/ins-nordkivu/$1 [L,R,NE]
+

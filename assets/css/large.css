@@ -725,6 +725,15 @@ ul.spip li {
   float: right;
  width: 50%;
 }
+.rightList{
+  float: right;
+ width: 50%;
+ 
+}
+.rightList ul{
+  
+ list-style: none;
+}
 .listStat .leftListEconomique{
   float: left;
   width: 100%;
@@ -863,8 +872,6 @@ ul.spip li {
   position: relative;
   width: 70%;
   float: left;
-
-
 }
 
 .rightsideContent{
@@ -878,4 +885,19 @@ ul.spip li {
 .modal-body iframe{
   width: 560px;
   height: 315px;
+}
+.evolution_prix{
+  width:100% !important;
+  height: 350px!important;
+}
+.evolution_prix_hausse{
+  float:left;
+  width:45%;
+ }
+.evolution_prix_baisse{
+float:right;
+margin-left:550px;
+width:45%;
+position: absolute;
+/*background-color: rgba(248, 24, 24, 0.5);*/
 }

@@ -80,15 +80,16 @@
 
  	<script src="http://localhost/ins-nordkivu/assets/js/jquery.min.js"></script>-->
 	<script src="http://localhost/ins-nordkivu/assets/js/jquery-3.3.1.js"></script>
+	<script src="http://localhost/ins-nordkivu/assets/js/moment.min.js"></script>
+	<script src="http://localhost/ins-nordkivu/assets/js/daterangepicker.min.js"></script>
 	<script src="http://localhost/ins-nordkivu/assets/js/bootstrap.min.js"></script>
 	<script src="http://localhost/ins-nordkivu/assets/js/headroom.min.js"></script>
 	<script src="http://localhost/ins-nordkivu/assets/js/jQuery.headroom.min.js"></script>
 	<script src="http://localhost/ins-nordkivu/assets/js/template.js"></script>
 	<script src="http://localhost/ins-nordkivu/assets/js/main.js"></script>
-	<script src="http://localhost/ins-nordkivu/assets/js/Chart.min.js"></script>
 	<script type="text/javascript"  src="/ins-nordkivu/assets/js/pdf.js"></script>
 	<script src="https://kit.fontawesome.com/8589e7d5e1.js" crossorigin="anonymous"></script>
-
+	<script src="http://localhost/ins-nordkivu/assets/js/Chart.min.js"></script>
 
 
 </body>

@@ -85,7 +85,7 @@
 						<div class="form-group">
 						<label for="Avenue">Avenue</label>
 						<select  id="Avenue"  class="form-control">
-									<option value="0">selectionnez votre cellule</option>
+									<option value="0">selectionnez votre Avenue</option>
 						</select>
 						</div>
 					</div>

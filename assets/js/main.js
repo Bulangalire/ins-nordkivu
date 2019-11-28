@@ -302,8 +302,6 @@ $(document).ready(function(){
 
 	$('#cellule').change(function(){
 
-
-
 		var avenue_id= $(this).val();
 
 
@@ -332,8 +330,21 @@ $(document).ready(function(){
 
 });
 
+$(document).ready(function(){
+	$('#mois_concerne').change(function(){
+		var mois= $(this).val();
+	
+		$.ajax({
 
-
+		url:"evolution_indice_prix.php",
+		method:'POST',
+		data:{mois:mois},
+		success:function(data){
+			$('#tblvariayionprix').html(data);
+			}
+		});
+	});
+});
 
 
 

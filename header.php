@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="http://localhost/ins-nordkivu/assets/css/main.css">
 	<link rel="stylesheet" type="text/css" href="http://localhost/ins-nordkivu/assets/css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="http://localhost/ins-nordkivu/assets/css/w3.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/ins-nordkivu/assets/css/daterangepicker.css">
 
 	<link rel="stylesheet" href="http://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -20,6 +21,7 @@
     <link rel="stylesheet" media="screen and (min-width: 720px)" href="http://localhost/ins-nordkivu/assets/css/large.css"/>
 
 	<link rel="stylesheet" type="text/css" href="http://localhost/ins-nordkivu/assets/css/font-awesome.min.css">
+	
  <body>
 
  	<!-- Fixed navbar -->

@@ -177,6 +177,7 @@ function chartAvenue(titre,  ctx, typeChart){
         options: {
             legend:{
                 position:'bottom',
+                position:'bottom',
                 display:false
             },
             title:{
